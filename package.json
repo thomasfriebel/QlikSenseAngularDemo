@@ -1,6 +1,6 @@
 {
   "name": "qliksenseangulardemo",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "A lightweight browser demo of the Qlik Engine API",
   "main": "run.js",
   "devDependencies": {},
