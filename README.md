@@ -1,10 +1,24 @@
 QlikSenseAngularDemo
 ====================
 
-A lightweight browser demo of the new Qlik Engine API
+A lightweight browser demo of the new Qlik Engine API.
+
+Description
+===========
+
+This demo web application demonstrates some of the capabilities of the new Qlik Engine API that comes with Qlik Sense (Desktop).
+The demo itself runs completely inside the web browser (thanks to AngularJS) and does not need a separate web server.
+In the package, though, a simple web server is contained in order to facilitate the use.
+
+What you can see in this demo is the communication with the Qlik Engine API via a websocket connection. It shows some basic functionalities, as for instance querying the Qlik Sense version number, retrieving a list of accessible Qlik Sense Applications and displaying the metadata and the table structure of a chosen app.
+Finally it demonstrates how to make use of dynamically defined hypercubes. 
+This allows selection of a dimension and a measure and after that visualizes the result dataset with the Google Charts library (instead of the Qlik Sense vizs).
+
 
 Installation
 ============
+
+Node.js is required for this demo to set up and work.
 
 Use npm to install the demo application.
 
