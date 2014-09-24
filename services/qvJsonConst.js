@@ -104,6 +104,10 @@ angular.module("QvAngular")
             "handle": 1,
             "params": [
                 {
+                    "qInfo": {
+                        "qType": "Chart"
+                    },
+
                     "qHyperCubeDef": {
                         "qDimensions": [
                             {
@@ -163,7 +167,7 @@ angular.module("QvAngular")
             "params": []
         },
 
-        "SelectHyperCubeValues":{
+        "SelectHyperCubeValues": {
             "jsonrpc": "2.0",
             "method": "SelectHyperCubeValues",
             "handle": -1,
