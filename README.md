@@ -21,5 +21,8 @@ The integrated web server will listen to port **8085**. The port can be changed 
 
 To start the demo, open your favorite web browser and enter **http://localhost:8085/**. You should instantly see the entry page.
 
+Ensure your Qlik Sense Desktop is up and running before interacting with the demo app.
+
+
 
 
