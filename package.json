@@ -5,7 +5,7 @@
     "serve-static": "^1.6.2"
   },
   "name": "qliksenseangulardemo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A lightweight browser demo of the Qlik Engine API",
   "main": "run.js",
   "devDependencies": {},
