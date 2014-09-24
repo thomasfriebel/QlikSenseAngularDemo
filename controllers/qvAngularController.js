@@ -1,5 +1,5 @@
 angular.module("QvAngular", ["ngRoute", "ngResource", "googlechart"])
-    .constant("version", "0.0.1b")
+    .constant("version", "0.1.0")
     .config(function ($routeProvider) {
         $routeProvider.when("/doclist", {
             templateUrl: "views/docList.html",
