@@ -1,0 +1,37 @@
+{
+  "name": "QlikSenseAngularDemo",
+  "version": "0.0.1",
+  "authors": [
+    "Thomas Friebel <thomasfriebel@gmail.com>"
+  ],
+  "description": "A lightweight browser demo of the Qlik Engine API",
+  "main": "run.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "qlik",
+    "sense",
+    "engine",
+    "api",
+    "demo"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.dijit.de",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-google-chart": "~0.0.10",
+    "angular": "~1.2.25",
+    "angular-route": "~1.2.25",
+    "angular-resource": "~1.2.25",
+    "bootstrap": "~3.2.0",
+    "jquery": "~2.1.1"
+  }
+}

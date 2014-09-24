@@ -7,7 +7,7 @@
   "name": "qliksenseangulardemo",
   "version": "0.0.1",
   "description": "A lightweight browser demo of the Qlik Engine API",
-  "main": "index.html",
+  "main": "run.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
