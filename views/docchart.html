@@ -1,0 +1,44 @@
+<div ng-controller="qvDocCtrl">
+    <script>
+    </script>
+    <h1>{{q.doc.qTitle || q.docId}}</h1>
+    <h3>Google Chart</h3>
+
+    <div>
+        <btn class="btn btn-warning" ng-click="getCube()">Generate Chart</btn>
+        <span ng-show="q.chart">
+    <a class="btn btn-primary" ng-click="getFields()">Fields</a>
+    <a class="btn btn-warning" ng-click="getCube('previous')">Back</a>
+    <a class="btn btn-warning" ng-click="getCube('next')">Forward</a>
+
+    </span>
+    </div>
+    <div ng-if="q.fieldlist" style="margin:10px;">
+        <select class="select" ng-model="q.dimselect" ng-options="field.qName as field.qName for field in q.fieldlist">
+            <!--
+            <option ng-repeat="field in q.fieldlist" value="{{field.qName}}">
+                {{field.qSrcTables[0]}}.{{field.qName}}
+            </option>
+-->
+
+        </select>
+        <select ng-model="q.aggrselect" ng-options="aggr for aggr in ['SUM','COUNT','MAX','MIN','AVG']">
+        </select>
+        <select ng-model="q.measelect" ng-options="field.qName as field.qName for field in q.fieldlist">
+            <!--
+            <option ng-repeat="field in q.fieldlist" value="{{field.qName}}">
+                {{field.qSrcTables[0]}}.{{field.qName}}
+            </option>
+-->
+
+        </select>
+        <select ng-model="q.chartType" ng-options="chart for chart in ['BarChart','PieChart','AreaChart','LineChart','ColumnChart','Table']">
+        </select>
+    </div>
+    <div ng-if="q.chart">
+        <div google-chart chart="chartObject" on-select="onselect(selectedItem)" style="height:300px;"></div>
+    </div>
+
+
+
+</div>

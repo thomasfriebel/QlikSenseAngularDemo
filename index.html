@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="QvAngular">
+
+<head>
+    <title>QvAngular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="ngmodules/angular-route.js"></script>
+    <script src="ngmodules/angular-resource.js"></script>
+    <script src="bower_components/angular-google-chart/ng-google-chart.js"></script>
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script>
+    </script>
+
+    <script src="controllers/qvAngularController.js"></script>
+    <script src="controllers/qvDocController.js"></script>
+    <script src="services/qvJsonConst.js"></script>
+    <script src="services/qvAngularServices.js"></script>
+</head>
+
+<body ng-controller="qvAngularCtrl">
+    <div class="nav navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">QvAngular (Version {{version}})   {{QvVersion}}</a>
+
+        </div>
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#">{{qvCommService.isConnected() ? "Connected" : "Offline"}}</a>
+
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="well">
+        <ng-view />
+    </div>
+    <button class="btn btn-primary" ng-click="test()">{{OSName || "Test for OS"}}</button>
+    <div class="btn-group">
+        <button class="btn btn-primary" ng-click="connect()">Connect</button>
+        <a href="#/doclist" class="btn btn-primary" ng-click="getFileList()">Get List</a>
+        <button class="btn btn-danger" ng-click="disconnect()">Disonnect</button>
+    </div>
+    <div class="alert alert-info" style="margin:50px;">
+        Questions? Contact me at thomas.friebel@qlik.com
+    </div>
+</body>
+
+
+
+</html>

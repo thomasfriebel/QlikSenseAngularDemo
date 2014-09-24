@@ -1,0 +1,16 @@
+<div ng-controller="qvDocTableCtrl">
+    Handle *{{q.qHandle}}*
+<h2>Table data ({{q.qTable}} {{q.qHandle}})</h2>
+
+        <table class="table table-striped table-bordered">
+            <tr>
+            <th ng-repeat="field in getFields(q.qTable) | filter:q.filterSystemFields:q.qTable">
+                {{field.qName}}</th>
+            </tr>
+            <tr ng-repeat="row in q.qData">
+                <td style="text-overflow:ellipsis;" ng-repeat="cell in row.qValue">
+
+                    {{cell.qIsNumeric ? cell.qNumber : cell.qText}}</td>
+            </tr>
+        </table>
+</div>

@@ -1,0 +1,12 @@
+<div>
+    <h1>QvAngular</h1>
+    <h3>A prototype to get an idea of the power of the Qlik Sense Engine API</h3>
+    <div ng-hide="qvCommService.isConnected()">
+        <h2>Welcome</h2>
+        <p>Please open connection first.</p>
+        <button ng-click="connect()" class="btn btn-lg btn-primary">Connect to Qlik Sense</button>
+    </div>
+    <div ng-show="qvCommService.isConnected()">
+Do something with Qlik Sense...
+     </div>
+</div>

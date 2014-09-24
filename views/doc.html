@@ -1,0 +1,35 @@
+<div ng-controller="qvDocCtrl">
+    <script>
+    </script>
+    <h1>{{q.doc.qTitle || q.docId}}</h1>
+    <img class="pull-right" ng-if="q.doc[0].thumbnail" srcset="{{'http://localhost:4848/' + q.doc[0].thumbnail.substring(3)}}" style="width:120px;"></img>
+        <pre ng-show="q.doc[0].description && q.doc[0].description.length > 0">{{q.doc[0].description}}
+        </pre>
+    <p>
+        <a class="btn btn-warning" ng-href="#docchart/{{q.docId}}.qvf">Goto Google Chart</a>
+    </p>
+    <table class="table table-striped table-bordered" ng-repeat="table in q.qtr">
+        <thead>
+            <tr>
+                <th style="width:50%;">{{table.qName}}</th>
+                <th>{{table.qNoOfRows}} rows</th>
+            </tr>
+            <tr>
+                <th>Field name</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="field in table.qFields">
+                <td>{{field.qName}}</td>
+                <td>
+                    <span class="label label-info" ng-repeat="tag in field.qTags" style="margin:3px;">
+                    {{tag}}
+                </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>

@@ -1,0 +1,29 @@
+
+<h2>QVFs</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Location</th>
+<!--
+            <th>Debug</th>
+-->
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="doc in qDocList | orderBy:qDocId">
+            <td>{{$index}}</td>
+            <td>{{doc.qDocName}}</td>
+            <td>{{doc.qDocId}}</td>
+<!--
+            <td><small>{{doc}}</small>
+-->
+            </td>
+            <td><a class="btn btn-primary" ng-href="#/doc/{{doc.qDocName}}">Data Model</a></td>
+            <td><a class="btn btn-primary" ng-href="#/docchart/{{doc.qDocName}}">Google Chart</a></td>
+        </tr>
+    </tbody>
+</table>
